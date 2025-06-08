@@ -2,9 +2,42 @@
 <html>
 <head>
     <title>Naman Agrawal - Resume</title>
-    <link rel="icon" href="ic.png">
+    <link rel="icon" href="ic.png?v=3">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .pdf-container {
+            flex: 1;
+            overflow: hidden;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .fallback-link {
+            text-align: center;
+            padding: 15px;
+            background: #f0f0f0;
+        }
+    </style>
 </head>
 <body>
-    <embed src="resume.pdf" width="100%" height="1000px" type="application/pdf">
+    <div class="pdf-container">
+        <!-- Primary solution: Google Docs viewer -->
+        <iframe src="https://docs.google.com/viewer?url=https://naman-agrwl.github.io/resume.pdf&embedded=true"></iframe>
+    </div>
+    
+    <!-- Fallback for extreme cases -->
+    <div class="fallback-link">
+        <a href="resume.pdf" download>Download PDF</a> | 
+        <a href="resume.pdf" target="_blank">Open in New Tab</a>
+    </div>
 </body>
 </html>
